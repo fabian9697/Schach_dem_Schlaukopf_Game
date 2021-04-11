@@ -8,50 +8,92 @@ public class Dummkopf_Right : GameFigures
     public override bool[,] PossibleMove()
     {
         bool[,] r = new bool[8, 7];
-        GameFigures c, c2;
+        GameFigures c;
 
         if (!isWhite)
         {
-            // Diagonal left
+            // Forward
+            if (CurrentX != 7)
+            {
+                c = GameManagement.Instance.FigurePositions[CurrentX + 1, CurrentY];
+                if (c == null || c.isWhite)
+                {
+                    r[CurrentX + 1, CurrentY] = true;
+                }
+            }
+
+            // Backward
+            if (CurrentX != 0)
+            {
+                c = GameManagement.Instance.FigurePositions[CurrentX - 1, CurrentY];
+                if (c == null || c.isWhite)
+                {
+                    r[CurrentX - 1, CurrentY] = true;
+                }
+            }
+
+            // Left
+            if (CurrentY != 6)
+            {
+                c = GameManagement.Instance.FigurePositions[CurrentX, CurrentY + 1];
+                if (c == null || c.isWhite)
+                {
+                    r[CurrentX, CurrentY + 1] = true;
+                }
+            }
+
+            // Right
+            if (CurrentY != 0)
+            {
+                c = GameManagement.Instance.FigurePositions[CurrentX, CurrentY - 1];
+                if (c == null || c.isWhite)
+                {
+                    r[CurrentX, CurrentY - 1] = true;
+                }
+            }
+
+            // Diagonal forward left
             if (CurrentX != 7 && CurrentY != 6)
             {
                 c = GameManagement.Instance.FigurePositions[CurrentX + 1, CurrentY + 1];
-                if (c != null && c.isWhite)
+                if (c == null || c.isWhite)
                 {
                     r[CurrentX + 1, CurrentY + 1] = true;
                 }
             }
 
-            // Diagonal right
+            // Diagonal forward right
             if (CurrentX != 7 && CurrentY != 0)
             {
                 c = GameManagement.Instance.FigurePositions[CurrentX + 1, CurrentY - 1];
-                if (c != null && c.isWhite)
+                if (c == null || c.isWhite)
                 {
                     r[CurrentX + 1, CurrentY - 1] = true;
                 }
             }
 
-            // Forward
-            if (CurrentX != 7)
+            // Diagonal backward left
+            if (CurrentX != 0 && CurrentY != 6)
             {
-                c = GameManagement.Instance.FigurePositions[CurrentX + 1, CurrentY];
-                if (c == null)
+                c = GameManagement.Instance.FigurePositions[CurrentX - 1, CurrentY + 1];
+                if (c == null || c.isWhite)
                 {
-                    r[CurrentX + 1, CurrentY] = true;
+                    r[CurrentX - 1, CurrentY + 1] = true;
                 }
             }
-            
-            // Two steps forward
-            if (CurrentX == 1)
+
+            // Diagonal backward right
+            if (CurrentX != 0 && CurrentY != 0)
             {
-                c = GameManagement.Instance.FigurePositions[CurrentX+1, CurrentY];
-                c2 = GameManagement.Instance.FigurePositions[CurrentX+2, CurrentY];
-                if (c == null && c2 == null)
+                c = GameManagement.Instance.FigurePositions[CurrentX - 1, CurrentY - 1];
+                if (c == null || c.isWhite)
                 {
-                    r[CurrentX + 2, CurrentY] = true;
+                    r[CurrentX - 1, CurrentY - 1] = true;
                 }
             }
+
+
+
         }
         return r;
     }

@@ -12,6 +12,70 @@ public class Schlitzohr_Right : GameFigures
         GameFigures c;
         int i, j;
 
+        // Forward
+        i = CurrentX;
+        j = CurrentY;
+        while (true)
+        {
+            i--;
+            if (i < 0) break;
+            c = GameManagement.Instance.FigurePositions[i, j];
+            if (c == null) r[i, j] = true;
+            else
+            {
+                if (c.isWhite != isWhite) r[i, j] = true;
+                break;
+            }
+        }
+
+        // Backward
+        i = CurrentX;
+        j = CurrentY;
+        while (true)
+        {
+            i++;
+            if (i >= 8) break;
+            c = GameManagement.Instance.FigurePositions[i, j];
+            if (c == null) r[i, j] = true;
+            else
+            {
+                if (c.isWhite != isWhite) r[i, j] = true;
+                break;
+            }
+        }
+
+        // Left
+        i = CurrentX;
+        j = CurrentY;
+        while (true)
+        {
+            j--;
+            if (j < 0) break;
+            c = GameManagement.Instance.FigurePositions[i, j];
+            if (c == null) r[i, j] = true;
+            else
+            {
+                if (c.isWhite != isWhite) r[i, j] = true;
+                break;
+            }
+        }
+
+        // Right
+        i = CurrentX;
+        j = CurrentY;
+        while (true)
+        {
+            j++;
+            if (j >= 7) break;
+            c = GameManagement.Instance.FigurePositions[i, j];
+            if (c == null) r[i, j] = true;
+            else
+            {
+                if (c.isWhite != isWhite) r[i, j] = true;
+                break;
+            }
+        }
+
         // Diagonal forward left
         i = CurrentX;
         j = CurrentY;
