@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// The class "Dummkopf_Left" controls the actions and movements of "Dummkopf" figures of the left player.
 public class Dummkopf_Left : GameFigures
 {
     public override bool[,] PossibleMove()
@@ -15,7 +16,6 @@ public class Dummkopf_Left : GameFigures
             if (CurrentX != 0)
             {
                 c = GameManagement.Instance.FigurePositions[CurrentX - 1, CurrentY];
-                
                 if (c == null || !c.isWhite)
                 {
                     r[CurrentX - 1, CurrentY] = true;
@@ -26,81 +26,72 @@ public class Dummkopf_Left : GameFigures
             if (CurrentX != 7)
             {
                 c = GameManagement.Instance.FigurePositions[CurrentX + 1, CurrentY];
-               
                 if (c == null || !c.isWhite)
                 {
                     r[CurrentX + 1, CurrentY] = true;
                 }
             }
+
             // Left
             if (CurrentY != 0)
             {
                 c = GameManagement.Instance.FigurePositions[CurrentX, CurrentY - 1];
-
                 if (c == null || !c.isWhite)
                 {
                     r[CurrentX, CurrentY - 1] = true;
                 }
             }
+
             // Right
             if (CurrentY != 6)
             {
                 c = GameManagement.Instance.FigurePositions[CurrentX, CurrentY + 1];
-
                 if (c == null || !c.isWhite)
                 {
                     r[CurrentX, CurrentY + 1] = true;
                 }
             }
 
-            // DiogonalForwardRight
+            // Diagonal forward right
             if (CurrentX != 0 && CurrentY != 6)
             {
                 c = GameManagement.Instance.FigurePositions[CurrentX-1, CurrentY + 1];
-
                 if (c == null || !c.isWhite)
                 {
                     r[CurrentX - 1, CurrentY + 1] = true;
                 }
             }
 
-            // DiogonalForwardLeft
+            // Diagonal forward left
             if (CurrentX != 0 && CurrentY != 0)
             {
                 c = GameManagement.Instance.FigurePositions[CurrentX - 1, CurrentY - 1];
-
                 if (c == null || !c.isWhite)
                 {
                     r[CurrentX - 1, CurrentY - 1] = true;
                 }
             }
 
-            // DiogonalBackwardRight
+            // Diagonal backward right
             if (CurrentX != 7 && CurrentY != 6)
             {
                 c = GameManagement.Instance.FigurePositions[CurrentX + 1, CurrentY + 1];
-
                 if (c == null || !c.isWhite)
                 {
                     r[CurrentX + 1, CurrentY + 1] = true;
                 }
             }
 
-            // DiogonalBackwardLeft
+            // Diagonal backward left
             if (CurrentX != 7 && CurrentY != 0)
             {
                 c = GameManagement.Instance.FigurePositions[CurrentX + 1, CurrentY - 1];
-
                 if (c == null || !c.isWhite)
                 {
                     r[CurrentX + 1, CurrentY - 1] = true;
                 }
             }
-
-
-
         }
-
         return r;
     }
 }

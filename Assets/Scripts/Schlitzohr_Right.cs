@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// The class "Schlitzohr_Right" controls the actions and movements of "Schlitzohr" figures of the right player.
 public class Schlitzohr_Right : GameFigures
 {
     public override bool[,] PossibleMove()
@@ -11,7 +12,7 @@ public class Schlitzohr_Right : GameFigures
         GameFigures c;
         int i, j;
 
-        // Top Left
+        // Diagonal forward left
         i = CurrentX;
         j = CurrentY;
         while (true)
@@ -28,7 +29,7 @@ public class Schlitzohr_Right : GameFigures
             }
         }
 
-        // Top Right
+        // Diagonal forward right
         i = CurrentX;
         j = CurrentY;
         while (true)
@@ -45,7 +46,7 @@ public class Schlitzohr_Right : GameFigures
             }
         }
 
-        // Bottom Left
+        // Diagonal backward left
         i = CurrentX;
         j = CurrentY;
         while (true)
@@ -62,7 +63,7 @@ public class Schlitzohr_Right : GameFigures
             }
         }
 
-        // Bottom Right
+        // Diagonal backward right
         i = CurrentX;
         j = CurrentY;
         while (true)
@@ -78,7 +79,6 @@ public class Schlitzohr_Right : GameFigures
                 break;
             }
         }
-
         return r;
     }
 }

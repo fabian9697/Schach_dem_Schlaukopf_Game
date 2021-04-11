@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// The class "Schlitzohr_Left" controls the actions and movements of "Schlitzohr" figures of the left player.
 public class Schlitzohr_Left : GameFigures
 {
     public override bool[,] PossibleMove()
@@ -11,14 +12,12 @@ public class Schlitzohr_Left : GameFigures
         GameFigures c;
         int i, j;
 
-        // forward
+        // Forward
         i = CurrentX;
         j = CurrentY;
         while (true)
         {
             i--;
-            
-            
             if (i < 0) break;
             c = GameManagement.Instance.FigurePositions[i, j];
             if (c == null) r[i, j] = true;
@@ -29,14 +28,12 @@ public class Schlitzohr_Left : GameFigures
             }
         }
 
-        // backward
+        // Backward
         i = CurrentX;
         j = CurrentY;
         while (true)
         {
             i++;
-            
-
             if (i >= 8) break;
             c = GameManagement.Instance.FigurePositions[i, j];
             if (c == null) r[i, j] = true;
@@ -47,14 +44,12 @@ public class Schlitzohr_Left : GameFigures
             }
         }
 
-        // left
+        // Left
         i = CurrentX;
         j = CurrentY;
         while (true)
         {
             j--;
-            
-
             if (j < 0) break;
             c = GameManagement.Instance.FigurePositions[i, j];
             if (c == null) r[i, j] = true;
@@ -65,14 +60,12 @@ public class Schlitzohr_Left : GameFigures
             }
         }
 
-        // right
+        // Right
         i = CurrentX;
         j = CurrentY;
         while (true)
         {
             j++;
-           
-
             if (j >= 7) break;
             c = GameManagement.Instance.FigurePositions[i, j];
             if (c == null) r[i, j] = true;
@@ -83,7 +76,7 @@ public class Schlitzohr_Left : GameFigures
             }
         }
 
-        // Top Left
+        // Diagonal forward left
         i = CurrentX;
         j = CurrentY;
         while (true)
@@ -100,7 +93,7 @@ public class Schlitzohr_Left : GameFigures
             }
         }
 
-        // Top Right
+        // Diagonal forward right
         i = CurrentX;
         j = CurrentY;
         while (true)
@@ -117,7 +110,7 @@ public class Schlitzohr_Left : GameFigures
             }
         }
 
-        // Bottom Left
+        // Diagonal backward left
         i = CurrentX;
         j = CurrentY;
         while (true)
@@ -134,7 +127,7 @@ public class Schlitzohr_Left : GameFigures
             }
         }
 
-        // Bottom Right
+        // Diagonal backward right
         i = CurrentX;
         j = CurrentY;
         while (true)
@@ -150,7 +143,6 @@ public class Schlitzohr_Left : GameFigures
                 break;
             }
         }
-
         return r;
     }
 }

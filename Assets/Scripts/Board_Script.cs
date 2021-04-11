@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+// The class "Board" manages all pieces on the board.
 public class Board : MonoBehaviour
 {
     public Material defaultMaterial;

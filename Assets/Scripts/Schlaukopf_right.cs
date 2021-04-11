@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// The class "Schlaukopf_right" controls the actions and movements of "Schlaukopf" figures of the right player.
 public class Schlaukopf_right : GameFigures
 {
     public override bool[,] PossibleMove()
@@ -11,7 +12,6 @@ public class Schlaukopf_right : GameFigures
 
         if (!isWhite)
         {
-
             // Diagonal Left
             if (CurrentX != 7 && CurrentY != 7)
             {
@@ -42,8 +42,7 @@ public class Schlaukopf_right : GameFigures
                 }
             }
 
-
-            // Two Steps Forward
+            // Two steps forward
             Debug.Log(CurrentX);
             if (CurrentX == 1)
             {
@@ -55,9 +54,7 @@ public class Schlaukopf_right : GameFigures
                     r[CurrentX + 2, CurrentY] = true;
                 }
             }
-
         }
-
         return r;
     }
 }

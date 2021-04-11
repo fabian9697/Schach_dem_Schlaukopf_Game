@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// The class "Dummkopf_Right" controls the actions and movements of "Dummkopf" figures of the right player.
 public class Dummkopf_Right : GameFigures
 {
     public override bool[,] PossibleMove()
@@ -11,8 +12,7 @@ public class Dummkopf_Right : GameFigures
 
         if (!isWhite)
         {
-
-            // Diagonal Left
+            // Diagonal left
             if (CurrentX != 7 && CurrentY != 6)
             {
                 c = GameManagement.Instance.FigurePositions[CurrentX + 1, CurrentY + 1];
@@ -22,7 +22,7 @@ public class Dummkopf_Right : GameFigures
                 }
             }
 
-            // Diagonal Right
+            // Diagonal right
             if (CurrentX != 7 && CurrentY != 0)
             {
                 c = GameManagement.Instance.FigurePositions[CurrentX + 1, CurrentY - 1];
@@ -41,13 +41,10 @@ public class Dummkopf_Right : GameFigures
                     r[CurrentX + 1, CurrentY] = true;
                 }
             }
-
             
-            // Two Steps Forward
-            
+            // Two steps forward
             if (CurrentX == 1)
             {
-                
                 c = GameManagement.Instance.FigurePositions[CurrentX+1, CurrentY];
                 c2 = GameManagement.Instance.FigurePositions[CurrentX+2, CurrentY];
                 if (c == null && c2 == null)
@@ -55,9 +52,7 @@ public class Dummkopf_Right : GameFigures
                     r[CurrentX + 2, CurrentY] = true;
                 }
             }
-
         }
-
         return r;
     }
 }

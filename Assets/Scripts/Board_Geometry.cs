@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// The class "Geometry" is used for position conversions on the board.
 public class Geometry
 {
     static public Vector3 PointFromGrid(Vector2Int gridPoint)

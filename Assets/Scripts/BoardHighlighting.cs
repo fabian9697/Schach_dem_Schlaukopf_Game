@@ -2,72 +2,64 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoardHighlighting : MonoBehaviour {
-
-    //Instanzierung der BoardHighlightigs
+// The class "BoardHighlighting" is responsible for several types of highlighting on the board.
+public class BoardHighlighting : MonoBehaviour 
+{
     public static BoardHighlighting Instance { get; set; }
     
-    //Einbinden eines Prefabs aus Unity
     [SerializeField]
     public GameObject highlightPrefab;
 
-    //Initialisieren einer Liste für alle erstellten Board-Highlights 
+    // List for all created highlights on the board 
     private List<GameObject> highlights;
 
     private void Start()
     {
         Instance = this;
-        //Liste aller vorhanden "Highlights" pro Feld
+        // List for all existing highlights per field
         highlights = new List<GameObject>();
     }
 
-    //Die möglichen Bewegungen einer selektierten Figur werden auf dem Spielbrett hervorgehoben
+    // Function to highlight possible movements of a selected figure on the board.
     public void HighlightAllowedMoves(bool[,] moves)
     {
-        //Durchlaufen aller Spalten
+        // Loop over all rows
         for (int i = 0; i < 8; i++)
         {
-            //Durchlaufen aller Zeilen
+            // Loop over all coloumns
             for (int j = 0; j < 7; j++)
             {
-                //Abgleichen mit dem übergebenem Array "allowedMoves" des GameManagements
+                // Comparison with the passed array "moves" 
                 if (moves[i, j])
                 {
-                    //Auswahl/Erstellung eines freien highlight Objects
+                    // Create a "HighlightObject"
                     GameObject HighlightObject = GetHighlightObject();
-                    //Aktivieren des ausgewählten Objects
+                    // Activate the object
                     HighlightObject.SetActive(true);
-                    //Positionieren des ausgewählten Objects
+                    // Place the object
                     HighlightObject.transform.position = new Vector3(i + 0.5f, 0, j + 0.5f);
                 }
             }
         }
     }
 
-    //Instanzieren oder aktivieren eines Highlightfeldes für jede Position auf dem Spielfeld
+    // Function to create "HighlightObjects" 
     private GameObject GetHighlightObject()
     {
-        //Finde das nächste inaktive highlight-field Element
+        // Find the next inactive highlight field item in "highlights"
         GameObject HighlightOnField = highlights.Find(g => !g.activeSelf);
-        //Falls kein inaktives existiert wird einees erzeugt
+        // If there is no inactive highlight field item, a new one will be created.
         if (HighlightOnField == null)
         {
-            //instanzieren eines neuen Feldes
             HighlightOnField = Instantiate(highlightPrefab);
-
-            //hinzufügen zur Liste verfügbarer Feld-Elemente
             highlights.Add(HighlightOnField);
         }
         return HighlightOnField;
     }
 
-    //Hier können alle bereits ezeugten highlights auf einmal inaktiviert werden.
-    
+    // Function to hide/ deactivate all created highlights
     public void HideHighlights()
     {
         foreach (GameObject go in highlights) go.SetActive(false);
     }
-
-    //Es gäbe verschiedene Lösungen für das highlighting, allerdings finde ich diese am besten, da weder sofort alle
-    //56 Elemente erzeugt werden müssen, noch jedes mal jedes Element nach der Nutzung zerstört werden muss.
 }
