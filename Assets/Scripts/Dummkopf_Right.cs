@@ -91,9 +91,6 @@ public class Dummkopf_Right : GameFigures
                     r[CurrentX - 1, CurrentY - 1] = true;
                 }
             }
-
-
-
         }
         return r;
     }

@@ -37,6 +37,7 @@ public class GameManagement : MonoBehaviour
     // Boolean to save whether a figure is allowed to conduct a movement
     private bool _hasAtLeastOneMove;
 
+    // Function to initialize a match. 
     void Start()
     {
         Instance = this;
@@ -78,27 +79,22 @@ public class GameManagement : MonoBehaviour
         SpawnFigure(5, 7, 3);
     }
 
+    // Function to place one figure on the board.
     private void SpawnFigure(int index, int x, int y)
     {
-        //index erwartet einen Index der Liste "Game Figures"
-        //x ist die Position auf den Zeilen des Spielbretts 
-        //y ist die Position auf den Spalten des Spielbretts 
-        //Einen neue Figure wird instanziert mittels "Game Figure List Index".
-        //Die Berechnung der Position auf dem Spielbrett erfolgt �ber die Funktion "GetTileCenter"
-        //Eine Rotation der Figuren ist nicht notwendig, da bereits in den Prefabs ber�cksichtigt
         GameObject brand_new_figure = Instantiate(GameFigures[index], GetTileCenter(x, y), GameFigures[index].transform.rotation) as GameObject;
         
-        //Die neue Figur wird in das zweidimensionale Array des Spielfelds an Position x,y aufgenommen.
+        // The new figure is added to the two dimensional array in which the figure positions are stored.
         FigurePositions[x, y] = brand_new_figure.GetComponent<GameFigures>();
         
-        //Die neue Figur wird �ber die Methode dessen �bergeordneter Klasse "GameFigures" auf dem Spielbrett positioniert.
+        // The new figure is placed on the board.
         FigurePositions[x, y].SetPosition(x, y);
 
-        //Die neue Figur wird in die Liste aktiver Figuren aufgenommen.
+        // The new figure is added to the list of active figures.
         _activeFigures.Add(brand_new_figure);
     }
-    //Get tile Center ermittelt die eigentlich Positionierung im Unity Koordinantensystem der Figuren 
-    //in Abh�ngigkeit der Skalierungsfaktoren (aktuell Konstanten)
+
+    // Function to determine the current position of a figure in the Unity coordinate system.
     private Vector3 GetTileCenter(int x, int y)
     {
         Vector3 origin = Vector3.zero;
@@ -107,45 +103,42 @@ public class GameManagement : MonoBehaviour
         origin.y += 0.5f;
         return origin;
     }
-    // Update is called once per frame
+
+    // The "Update" function is called once per frame.
     void Update()
     {
-        //Aufzeichnung eines Spielbretts in der scene view �ber Debug-Methoden
-        //N�tzlicch zur Ausrichtung des Spielfeld - Grids zum darunterliegenden "Bild" des Spielfelds
-        //Aktuell kommentiert, da nicht mehr notwendig
         DrawBoard();
-
-        //Berechnung und Darstellung der Maus-Position in der Scene-View
+        // Determination and visualization of the mouse position in the scene-view
         UpdateSelection();
 
-        //Reagieren auf "Klick"-Event der linken Maustaste
+        // Reaction to a "Click"-event of the left mouse button
         if (Input.GetMouseButtonDown(0))
         {
-            //Nur falls Maus-Position innerhalb des Boards 
+            // Check whether the mouse position is inside the board boundaries.
             if (selectionX >= 0 && selectionY >= 0)
             {
-                //Nur falls aktuell keine andere Figur angew�hlt ist kann eine andere Figur ausgew�hlt werden
+                // Only if no other figure is currently selected, a new figure can be selected.
                 if (_selectedFigure == null)
                 {
-                    //Figur selektieren
                     SelectFigure(selectionX, selectionY);
                 }
+                // Otherwise, the current figure is moved.
                 else
                 {
-                    //Figur bewegen
                     MoveFigure(selectionX, selectionY);
                 }
             }
         }
     }
 
+    // Function to visualize the board.
     private void DrawBoard()
     {
-        //Einstellen der L�nge und H�he des Grids f�r das Spielfeld
+        // Define the height and width of the board.
         Vector3 widthLine = Vector3.right * 8;
         Vector3 heightLine = Vector3.forward * 7;
 
-        //Linien ziehen um ein Spielfeld in der Scene-View zu erzeugen
+        // Draw lines to obtain a board in the scene-view.
         for (int i = 0; i <= 7; i++)
         {
             Vector3 start = Vector3.forward * i;
@@ -156,21 +149,17 @@ public class GameManagement : MonoBehaviour
                 Debug.DrawLine(start, start + heightLine);
             }
         }
-        //Falls sich der Mauszeiger innerhalb eines Spielfelds befindet wird in der Scene-View ein Kreuz eingeblendet.
+        // If the mouse is inside the board, a cross is displayed in the scene view.
         if (selectionX >= 0 && selectionY >= 0)
         {
-            Debug.DrawLine(Vector3.forward * selectionY + Vector3.right * selectionX,
-                Vector3.forward * (selectionY + 1) + Vector3.right * (selectionX + 1));
-            Debug.DrawLine(Vector3.forward * selectionY + Vector3.right * (selectionX + 1),
-                Vector3.forward * (selectionY + 1) + Vector3.right * selectionX);
+            Debug.DrawLine(Vector3.forward * selectionY + Vector3.right * selectionX, Vector3.forward * (selectionY + 1) + Vector3.right * (selectionX + 1));
+            Debug.DrawLine(Vector3.forward * selectionY + Vector3.right * (selectionX + 1), Vector3.forward * (selectionY + 1) + Vector3.right * selectionX);
         }
     }
-    //Methode zum Updaten der Mausposition
+
+    // Function to update the mouse position.
     private void UpdateSelection()
     {
-        //Ein "Raycast" wird von der Kamera-Position durch die Maus auf das Spielfeld "geschossen".
-        //Das "BoardLayer" muss auf jedenfall innerhalb des Spielfelds platziert werden, damit die Ausrichtung passt.
-        //Raycast-Distance muss mindestens lang genug sein, um am ���ersten Rand des Spielfelds noch auf das BoardLayer zu treffen.
         RaycastHit hit;
         float raycastDistance = 25.0f;
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, raycastDistance, LayerMask.GetMask("BoardLayer")))
@@ -178,7 +167,6 @@ public class GameManagement : MonoBehaviour
             selectionX = (int)hit.point.x;
             selectionY = (int)hit.point.z;
         }
-        //N�tig um Aktionen im GameManagement zu unterbinden
         else
         {
             selectionX = -1;
@@ -186,24 +174,22 @@ public class GameManagement : MonoBehaviour
         }
     }
     
-    //Methode zum Ausw�hlen einer Figur auf dem Spielfeld
+    // Function to select a figure on the board.
     private void SelectFigure(int x, int y)
     {
-        //Funktion nicht ausf�hren, wenn sich auf einem ausgew�hlten Spielfeld keine Figur, also im 2D-Array "FigurePositions" null, befindet
+        // Do not conduct the function if there is no figure on the selected field.
         if (FigurePositions[x, y] == null) return;
 
-        //Funktion nicht ausf�hren, wenn sich die Figurfarbe von der des aktuellen Speielers unterscheidet.
+        // Do not conduct the function if the selected figure does not belong to current player.
         if (FigurePositions[x, y].isWhite != isWhiteTurn) return;
 
-        //Der Merker wird zur�ckgesetzt
+        // Flag to store the information whether there exists at least one possible move for the current figure. 
         _hasAtLeastOneMove = false;
 
-        //Die m�glichen Bewegungen der individuellen Spielfigur an Position [x,y] werden in deren Methode "PossibleMove" ermittelt
+        // The possible moves of the selected figure are determined.
         _allowedMoves = FigurePositions[x, y].PossibleMove();
 
-        //Das zur�ckgegebene, boolsche 2D-Array "_allowedMoves" wird durchlaufen
-        //Sollte im Array ein "true" gefunden werden, werden die Schleifen abgebrochen
-        //Der Merker "_hasAtLeastOneMove" wird auf "true" gesetzt
+        // Loop over the returned two dimensional array "_allowedMoves". Break the loop if at least one move can be found and set the flag "_hasAtLeastOneMove" to true.
         for (int i = 0; i < 8; i++)
         {
             for (int j = 0; j < 7; j++)
@@ -211,68 +197,65 @@ public class GameManagement : MonoBehaviour
                 if (_allowedMoves[i, j])
                 {
                     _hasAtLeastOneMove = true;
-                    
-                    // break outer loop
+                    // Break outer loop
                     i = 7;
-
-                    // break inner loop
+                    // Break inner loop
                     break;
                 }
             }
         }
 
-        //Sollten keine Z�ge m�glich sein, wird die Methode hier abgebrochen
+        // If there exists no possible moves, the function is interrupted.
         if (!_hasAtLeastOneMove) return;
-        
-        //Da die Figur m�gliche Z�ge hat, wird diese nun auch angew�lt
+
+        // The "_selectedFigure" is set. 
         _selectedFigure = FigurePositions[x, y]; 
-        //Die Methode HighlightAllowedMoves wird ausgef�hrt und alle m�glichen Z�ge werden auf dem Spielbrett hervorgehoben
+        // The possible moves of the selected figure are highlighted on the board.
         BoardHighlighting.Instance.HighlightAllowedMoves(_allowedMoves);
     }
 
-    //Methode zum Bewegen einer Figur
+    // Function to move a figure.
     private void MoveFigure(int x, int y)
     {
-        //Nur ausf�hren, wenn auf ein Spielfeld mit den Koordinaten geklickt wurde, auf dem sich im "_allowedMoves"-Array ebenfalls ein "True"-val
-        //befindent.
+        // Check whether the target field is a possible one according to the allowed moves of the figure.
         if (_allowedMoves[x, y])
         {
-            //Abfrage ob auf dem ausgew�hltem Feld eine gegnerische Figur steht.
+            // Check whether there is a figure of the enemy placed on the target field.
             GameFigures PossibleEnemy = FigurePositions[x, y];
             if (PossibleEnemy != null && PossibleEnemy.isWhite != isWhiteTurn)
             {
                 _activeFigures.Remove(PossibleEnemy.gameObject);
                 Destroy(PossibleEnemy.gameObject);
 
-                //Falls die Figur auch noch der generische "Schlaukopf" war, wird das Spiel beendet.
+                // If the enemy's figure was the "Schlaukopf" end the game.
                 if (PossibleEnemy.GetType() == typeof(Schlaukopf_left) || PossibleEnemy.GetType() == typeof(Schlaukopf_right))
                 {
                     EndGame();
                     return;
                 }
             }
-            //Die zur�ckgelassene Position nach der bald folgenden Bewegung wird zuvor auf "null" gesetzt
+            // Remove the current figure from its stored previous position.
             FigurePositions[_selectedFigure.CurrentX, _selectedFigure.CurrentY] = null;
 
-            //Die Figur wird auf die neue, ausgew�hlte Position auf dem Array "_allowedMoves" positioniert
+            // The figure is moved to the selected target position.
             _selectedFigure.transform.position = GetTileCenter(x, y);
             _selectedFigure.SetPosition(x, y);
             
-            //Das array "FigurePositions" wird ebenfalls mit der neuen Position der aktuellen Figur aktulaisiert
+            // Store the new position of the current figure.
             FigurePositions[x, y] = _selectedFigure;
 
-            //Der Spielzug des aktuellen Spielers wird beendet
+            // Change the active player after the move was conducted.
             isWhiteTurn = !isWhiteTurn;
         }
 
-        //Die zuvor eingeblendeten Board Highlights werden wieder zur�ckgesetzt
+        // Hide the previous shown highlights.
         BoardHighlighting.Instance.HideHighlights();
 
-        //Eine neue Figur kann nun wieder angew�hlt werden
+        // The "_selectedFigure" variable is cleared.
         _selectedFigure = null;
     }
    
-    //Das Spiel wird beendet, sobald einer der beiden Schlauk�pfe geschlagen wurde
+    // Function to end the game if a "Schlaukopf" is beaten.
     private void EndGame()
     {
         if (isWhiteTurn)
@@ -280,26 +263,20 @@ public class GameManagement : MonoBehaviour
         else
             Debug.Log("Black team won!");
 
-        //Zerst�rung aller �brigen Elemente im Register "_activeFigures"
-        foreach (GameObject Remeinders in _activeFigures)
-            Destroy(Remeinders);
+        // Destruction of all remaining figures on the board.
+        foreach (GameObject Remainder in _activeFigures)
+            Destroy(Remainder);
 
-        //Wei� ist wieder am Zug
+        // Team White can start a new game.
         isWhiteTurn = true;
 
-        //Alle Board-highlights werden zur�ckgesetzt
+        // All board highlights are resettet.
         BoardHighlighting.Instance.HideHighlights();
 
-        //Alle Figuren werden gespawnt
+        // All figures are placed on the board for a new game. 
         SpawnAllFigures();
 
-        //Meldung zum erneuten Spielstart
+        // Notification to start a new game.
         Debug.Log("White turn: " + isWhiteTurn);
     }
 }
-
-
-
-
-
-
