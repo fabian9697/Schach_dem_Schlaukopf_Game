@@ -15,11 +15,11 @@ C:/Users/chris/Desktop/Schlaukopf v1.7
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-59083
+59234
 Successfully changed project path to: C:/Users/chris/Desktop/Schlaukopf v1.7
 C:/Users/chris/Desktop/Schlaukopf v1.7
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 23.77 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 18.68 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.2f1 (8fd9074bf66c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/Resources/UnitySubsystems
@@ -35,134 +35,22 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56312
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56176
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.2f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003205 seconds.
+Registered in 0.001634 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 23.93 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 19.54 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.037 seconds
+- Completed reload, in  0.822 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000991 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.782 seconds
-Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1124 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 57.4 MB.
-System memory in use after: 57.4 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1566.
-Total: 2.024100 ms (FindLiveObjects: 0.162400 ms CreateObjectMapping: 0.042900 ms MarkObjects: 1.738900 ms  DeleteObjects: 0.078700 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Prefabs/figure-dummkopf(Clone).prefab
-  artifactKey: Guid(fa3fae2cc8cc97b468ed1f2cc7bc8cbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/figure-dummkopf(Clone).prefab using Guid(fa3fae2cc8cc97b468ed1f2cc7bc8cbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c0c73be3c6f68d79c7e6386d02b0c17') in 0.137816 seconds
-  Import took 0.141301 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000195 seconds.
-  path: Assets/Prefabs/Dummkopf_Left_fig.prefab
-  artifactKey: Guid(1eafda1d9575723418b5077def0ca332) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Dummkopf_Left_fig.prefab using Guid(1eafda1d9575723418b5077def0ca332) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a72f45defa092043a0c7b040738abfe2') in 0.009221 seconds
-  Import took 0.011705 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 35.392653 seconds.
-  path: Assets/Prefabs/Dummkopf_Left_fig.prefab
-  artifactKey: Guid(fa3fae2cc8cc97b468ed1f2cc7bc8cbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Dummkopf_Left_fig.prefab using Guid(fa3fae2cc8cc97b468ed1f2cc7bc8cbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20f7064d824e0a7bb1994b7fbc0dcf49') in 0.027734 seconds
-  Import took 0.030861 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.021382 seconds.
-  path: Assets/Prefabs/Dummkopf_Left_fig.prefab
-  artifactKey: Guid(fa3fae2cc8cc97b468ed1f2cc7bc8cbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Dummkopf_Left_fig.prefab using Guid(fa3fae2cc8cc97b468ed1f2cc7bc8cbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20f7064d824e0a7bb1994b7fbc0dcf49') in 0.019125 seconds
-  Import took 0.022037 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.135064 seconds.
-  path: Assets/Prefabs/Dummkopf_Left_fig.prefab
-  artifactKey: Guid(fa3fae2cc8cc97b468ed1f2cc7bc8cbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Dummkopf_Left_fig.prefab using Guid(fa3fae2cc8cc97b468ed1f2cc7bc8cbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0520d383eec318d3a3d65e91e1b8e70a') in 0.023826 seconds
-  Import took 0.026769 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.269413 seconds.
-  path: Assets/Prefabs/Dummkopf_Left_fig.prefab
-  artifactKey: Guid(fa3fae2cc8cc97b468ed1f2cc7bc8cbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Dummkopf_Left_fig.prefab using Guid(fa3fae2cc8cc97b468ed1f2cc7bc8cbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '955a9280a37870ab73b2d5a02dea8d95') in 0.019284 seconds
-  Import took 0.022110 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 58.124937 seconds.
-  path: Assets/Prefabs/Dummkopf_Left_fig.prefab
-  artifactKey: Guid(fa3fae2cc8cc97b468ed1f2cc7bc8cbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Dummkopf_Left_fig.prefab using Guid(fa3fae2cc8cc97b468ed1f2cc7bc8cbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f5edda15943be9d4d61206f3073029b') in 0.019452 seconds
-  Import took 0.024000 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000649 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.710 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1119 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 60.5 MB.
-System memory in use after: 60.5 MB.
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1576.
-Total: 2.141500 ms (FindLiveObjects: 0.165000 ms CreateObjectMapping: 0.048600 ms MarkObjects: 1.861600 ms  DeleteObjects: 0.064800 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 39.221793 seconds.
-  path: Assets/Prefabs/Dummkopf_Left_fig.prefab
-  artifactKey: Guid(fa3fae2cc8cc97b468ed1f2cc7bc8cbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Dummkopf_Left_fig.prefab using Guid(fa3fae2cc8cc97b468ed1f2cc7bc8cbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e03e82568d06073bb6cf3cd13c05ffc4') in 0.053041 seconds
-  Import took 0.055544 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000513 seconds.
+Registered in 0.000583 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
@@ -171,15 +59,539 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.560 seconds
+- Completed reload, in  0.606 seconds
 Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1124 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 57.4 MB.
+System memory in use after: 57.4 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1566.
+Total: 2.024100 ms (FindLiveObjects: 0.153500 ms CreateObjectMapping: 0.045600 ms MarkObjects: 1.755200 ms  DeleteObjects: 0.068800 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Prefabs/figure-schlaukopf.prefab
+  artifactKey: Guid(34a94f4525d867c4287ff092b9afbf70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/figure-schlaukopf.prefab using Guid(34a94f4525d867c4287ff092b9afbf70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fcb4f304aea6d32e76aee4521ff19c5') in 0.094655 seconds
+  Import took 0.097016 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.614866 seconds.
+  path: Assets/Prefabs/figure-schlitzohr.prefab
+  artifactKey: Guid(5d4e2fad7d037f1479830af9d0cfb882) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/figure-schlitzohr.prefab using Guid(5d4e2fad7d037f1479830af9d0cfb882) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77e57ae9c2dd271cb296248df2bf9653') in 0.040332 seconds
+  Import took 0.042801 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.043571 seconds.
+  path: Assets/Prefabs/figure-schlitzohr.prefab
+  artifactKey: Guid(5d4e2fad7d037f1479830af9d0cfb882) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/figure-schlitzohr.prefab using Guid(5d4e2fad7d037f1479830af9d0cfb882) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77e57ae9c2dd271cb296248df2bf9653') in 0.016682 seconds
+  Import took 0.018994 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 56.752043 seconds.
+  path: Assets/Prefabs/figure-dummkopf.prefab
+  artifactKey: Guid(3370fd66fee25284b92bec6826ebecf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/figure-dummkopf.prefab using Guid(3370fd66fee25284b92bec6826ebecf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d6fb2daa712a6dda3d7edaf693fc4b0') in 0.030205 seconds
+  Import took 0.032559 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.010018 seconds.
+  path: Assets/Prefabs/figure-dummkopf.prefab
+  artifactKey: Guid(3370fd66fee25284b92bec6826ebecf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/figure-dummkopf.prefab using Guid(3370fd66fee25284b92bec6826ebecf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d6fb2daa712a6dda3d7edaf693fc4b0') in 0.014301 seconds
+  Import took 0.016609 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.082792 seconds.
+  path: Assets/Prefabs/Dummkopf_Right_fig.prefab
+  artifactKey: Guid(3370fd66fee25284b92bec6826ebecf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dummkopf_Right_fig.prefab using Guid(3370fd66fee25284b92bec6826ebecf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a550e1d7bd61f05c71d6a1733745626') in 0.019703 seconds
+  Import took 0.022301 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.062404 seconds.
+  path: Assets/Prefabs/Dummkopf_Right_fig.prefab
+  artifactKey: Guid(3370fd66fee25284b92bec6826ebecf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dummkopf_Right_fig.prefab using Guid(3370fd66fee25284b92bec6826ebecf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a550e1d7bd61f05c71d6a1733745626') in 0.018088 seconds
+  Import took 0.020532 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.443649 seconds.
+  path: Assets/Prefabs/Dummkopf_Right_fig.prefab
+  artifactKey: Guid(3370fd66fee25284b92bec6826ebecf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dummkopf_Right_fig.prefab using Guid(3370fd66fee25284b92bec6826ebecf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6b7cbc25d4f9dad712f4cc09106ebfb') in 0.017769 seconds
+  Import took 0.020407 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.011535 seconds.
+  path: Assets/Prefabs/Dummkopf_Right_fig.prefab
+  artifactKey: Guid(3370fd66fee25284b92bec6826ebecf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dummkopf_Right_fig.prefab using Guid(3370fd66fee25284b92bec6826ebecf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6b7cbc25d4f9dad712f4cc09106ebfb') in 0.015321 seconds
+  Import took 0.017647 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000707 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.701 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1119 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.5 MB.
+System memory in use after: 60.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1576.
+Total: 2.451000 ms (FindLiveObjects: 0.223300 ms CreateObjectMapping: 0.060300 ms MarkObjects: 2.103300 ms  DeleteObjects: 0.062400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 503.440282 seconds.
+  path: Assets/Prefabs/Dummkopf_Right_fig.prefab
+  artifactKey: Guid(3370fd66fee25284b92bec6826ebecf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dummkopf_Right_fig.prefab using Guid(3370fd66fee25284b92bec6826ebecf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '652bccb9491d64f6cc3e5bef90afa949') in 0.067719 seconds
+  Import took 0.072207 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000636 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.704 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1119 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 60.5 MB.
 System memory in use after: 60.6 MB.
 
 Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1580.
-Total: 2.628300 ms (FindLiveObjects: 0.321700 ms CreateObjectMapping: 0.092900 ms MarkObjects: 2.160600 ms  DeleteObjects: 0.051100 ms)
+Total: 2.564600 ms (FindLiveObjects: 0.161600 ms CreateObjectMapping: 0.038400 ms MarkObjects: 2.287200 ms  DeleteObjects: 0.076100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 51.807039 seconds.
+  path: Assets/Prefabs/schlaukopf_left_fig.prefab
+  artifactKey: Guid(34a94f4525d867c4287ff092b9afbf70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/schlaukopf_left_fig.prefab using Guid(34a94f4525d867c4287ff092b9afbf70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59fc8c0cd3d3492d520529f24d95947c') in 0.049974 seconds
+  Import took 0.052075 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.032841 seconds.
+  path: Assets/Prefabs/schlaukopf_left_fig.prefab
+  artifactKey: Guid(34a94f4525d867c4287ff092b9afbf70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/schlaukopf_left_fig.prefab using Guid(34a94f4525d867c4287ff092b9afbf70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59fc8c0cd3d3492d520529f24d95947c') in 0.014073 seconds
+  Import took 0.016221 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 27.359098 seconds.
+  path: Assets/Prefabs/schlaukopf_left_fig.prefab
+  artifactKey: Guid(34a94f4525d867c4287ff092b9afbf70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/schlaukopf_left_fig.prefab using Guid(34a94f4525d867c4287ff092b9afbf70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a2b807ce18020eab4086e90c36b557f') in 0.015131 seconds
+  Import took 0.017220 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.014559 seconds.
+  path: Assets/Prefabs/schlaukopf_left_fig.prefab
+  artifactKey: Guid(34a94f4525d867c4287ff092b9afbf70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/schlaukopf_left_fig.prefab using Guid(34a94f4525d867c4287ff092b9afbf70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a2b807ce18020eab4086e90c36b557f') in 0.011883 seconds
+  Import took 0.013874 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.356106 seconds.
+  path: Assets/Prefabs/schlaukopf_left_fig.prefab
+  artifactKey: Guid(34a94f4525d867c4287ff092b9afbf70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/schlaukopf_left_fig.prefab using Guid(34a94f4525d867c4287ff092b9afbf70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '892d6046498291d3ca7080ee2645b730') in 0.011561 seconds
+  Import took 0.013844 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.019449 seconds.
+  path: Assets/Prefabs/schlaukopf_left_fig.prefab
+  artifactKey: Guid(34a94f4525d867c4287ff092b9afbf70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/schlaukopf_left_fig.prefab using Guid(34a94f4525d867c4287ff092b9afbf70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '892d6046498291d3ca7080ee2645b730') in 0.012541 seconds
+  Import took 0.014756 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.091774 seconds.
+  path: Assets/Prefabs/schlaukopf_left_fig.prefab
+  artifactKey: Guid(34a94f4525d867c4287ff092b9afbf70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/schlaukopf_left_fig.prefab using Guid(34a94f4525d867c4287ff092b9afbf70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34d92f31b0e5144d1ec9d870823074a6') in 0.012094 seconds
+  Import took 0.014177 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 47.188577 seconds.
+  path: Assets/Prefabs/schlaukopf_left_fig.prefab
+  artifactKey: Guid(34a94f4525d867c4287ff092b9afbf70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/schlaukopf_left_fig.prefab using Guid(34a94f4525d867c4287ff092b9afbf70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b591b6efd30334e94f3ab246a2e118f9') in 0.017251 seconds
+  Import took 0.021926 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000639 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.715 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1119 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.5 MB.
+System memory in use after: 60.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1584.
+Total: 1.967500 ms (FindLiveObjects: 0.157100 ms CreateObjectMapping: 0.051600 ms MarkObjects: 1.685300 ms  DeleteObjects: 0.071800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 56.065955 seconds.
+  path: Assets/Prefabs/figure-schlitzohr.prefab
+  artifactKey: Guid(5d4e2fad7d037f1479830af9d0cfb882) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/figure-schlitzohr.prefab using Guid(5d4e2fad7d037f1479830af9d0cfb882) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eeedd9ef1fd67da5d89104040ea9f897') in 0.055938 seconds
+  Import took 0.058602 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005163 seconds.
+  path: Assets/Prefabs/figure-schlitzohr.prefab
+  artifactKey: Guid(5d4e2fad7d037f1479830af9d0cfb882) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/figure-schlitzohr.prefab using Guid(5d4e2fad7d037f1479830af9d0cfb882) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eeedd9ef1fd67da5d89104040ea9f897') in 0.015047 seconds
+  Import took 0.017264 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.428126 seconds.
+  path: Assets/Prefabs/figure-schlitzohr.prefab
+  artifactKey: Guid(5d4e2fad7d037f1479830af9d0cfb882) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/figure-schlitzohr.prefab using Guid(5d4e2fad7d037f1479830af9d0cfb882) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99324e9cdc0507d3259048b777c15950') in 0.018853 seconds
+  Import took 0.021521 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.011732 seconds.
+  path: Assets/Prefabs/figure-schlitzohr.prefab
+  artifactKey: Guid(5d4e2fad7d037f1479830af9d0cfb882) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/figure-schlitzohr.prefab using Guid(5d4e2fad7d037f1479830af9d0cfb882) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99324e9cdc0507d3259048b777c15950') in 0.016448 seconds
+  Import took 0.018634 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 41.090733 seconds.
+  path: Assets/Prefabs/figure-schlitzohr.prefab
+  artifactKey: Guid(5d4e2fad7d037f1479830af9d0cfb882) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/figure-schlitzohr.prefab using Guid(5d4e2fad7d037f1479830af9d0cfb882) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94f12d79cf2387a65fb4a93b12f2a0de') in 0.020918 seconds
+  Import took 0.023247 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.424036 seconds.
+  path: Assets/Prefabs/Schlitzohr_left_figure.prefab
+  artifactKey: Guid(5d4e2fad7d037f1479830af9d0cfb882) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Schlitzohr_left_figure.prefab using Guid(5d4e2fad7d037f1479830af9d0cfb882) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89b4c1b12ec00177f49225f1659e2592') in 0.023302 seconds
+  Import took 0.025586 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.059007 seconds.
+  path: Assets/Prefabs/Schlitzohr_left_figure.prefab
+  artifactKey: Guid(5d4e2fad7d037f1479830af9d0cfb882) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Schlitzohr_left_figure.prefab using Guid(5d4e2fad7d037f1479830af9d0cfb882) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89b4c1b12ec00177f49225f1659e2592') in 0.017627 seconds
+  Import took 0.020035 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000659 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.702 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.31 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1119 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.6 MB.
+System memory in use after: 60.7 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1588.
+Total: 2.599700 ms (FindLiveObjects: 0.166000 ms CreateObjectMapping: 0.032000 ms MarkObjects: 2.333300 ms  DeleteObjects: 0.066500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 37.885737 seconds.
+  path: Assets/Prefabs/Schlitzohr_left_figure 1.prefab
+  artifactKey: Guid(0209b5b5779c20e47b0c5bd947641adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Schlitzohr_left_figure 1.prefab using Guid(0209b5b5779c20e47b0c5bd947641adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90d584ee6026d1de9077b354cd471d85') in 0.054339 seconds
+  Import took 0.056900 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.144781 seconds.
+  path: Assets/Prefabs/Schlitzohr_right_figure 1.prefab
+  artifactKey: Guid(0209b5b5779c20e47b0c5bd947641adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Schlitzohr_right_figure 1.prefab using Guid(0209b5b5779c20e47b0c5bd947641adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbb47b872dc6c51dd93b545efd59f09e') in 0.019689 seconds
+  Import took 0.022277 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.062116 seconds.
+  path: Assets/Prefabs/Schlitzohr_right_figure 1.prefab
+  artifactKey: Guid(0209b5b5779c20e47b0c5bd947641adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Schlitzohr_right_figure 1.prefab using Guid(0209b5b5779c20e47b0c5bd947641adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbb47b872dc6c51dd93b545efd59f09e') in 0.018541 seconds
+  Import took 0.021137 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.059883 seconds.
+  path: Assets/Prefabs/Schlitzohr_right_figure 1.prefab
+  artifactKey: Guid(0209b5b5779c20e47b0c5bd947641adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Schlitzohr_right_figure 1.prefab using Guid(0209b5b5779c20e47b0c5bd947641adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4aa969095bd0fbfcee1cd613fe992e3') in 0.015395 seconds
+  Import took 0.017753 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.066676 seconds.
+  path: Assets/Prefabs/Schlitzohr_right_figure 1.prefab
+  artifactKey: Guid(0209b5b5779c20e47b0c5bd947641adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Schlitzohr_right_figure 1.prefab using Guid(0209b5b5779c20e47b0c5bd947641adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4aa969095bd0fbfcee1cd613fe992e3') in 0.018049 seconds
+  Import took 0.020398 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 46.595621 seconds.
+  path: Assets/Prefabs/Schlitzohr_right_figure 1.prefab
+  artifactKey: Guid(0209b5b5779c20e47b0c5bd947641adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Schlitzohr_right_figure 1.prefab using Guid(0209b5b5779c20e47b0c5bd947641adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'baae4c1fb2045563cabb1c1fa10341b8') in 0.018874 seconds
+  Import took 0.021163 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.019270 seconds.
+  path: Assets/Prefabs/Schlitzohr_right_figure 1.prefab
+  artifactKey: Guid(0209b5b5779c20e47b0c5bd947641adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Schlitzohr_right_figure 1.prefab using Guid(0209b5b5779c20e47b0c5bd947641adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67494717448061892bb39af8ba48a087') in 0.018087 seconds
+  Import took 0.020369 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.086787 seconds.
+  path: Assets/Prefabs/Schlitzohr_right_figure 1.prefab
+  artifactKey: Guid(0209b5b5779c20e47b0c5bd947641adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Schlitzohr_right_figure 1.prefab using Guid(0209b5b5779c20e47b0c5bd947641adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67494717448061892bb39af8ba48a087') in 0.017260 seconds
+  Import took 0.019656 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.127368 seconds.
+  path: Assets/Prefabs/Schlitzohr_right_figure 1.prefab
+  artifactKey: Guid(0209b5b5779c20e47b0c5bd947641adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Schlitzohr_right_figure 1.prefab using Guid(0209b5b5779c20e47b0c5bd947641adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46ad980301d2c4e6a73b89420260bda3') in 0.017178 seconds
+  Import took 0.019404 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000650 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.709 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1119 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.6 MB.
+System memory in use after: 60.7 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1592.
+Total: 1.984400 ms (FindLiveObjects: 0.181500 ms CreateObjectMapping: 0.046600 ms MarkObjects: 1.692500 ms  DeleteObjects: 0.062100 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 39.592594 seconds.
+  path: Assets/Prefabs/schlaukopf_left_fig 1.prefab
+  artifactKey: Guid(36a0c141e53d9284b9df6fb7395431ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/schlaukopf_left_fig 1.prefab using Guid(36a0c141e53d9284b9df6fb7395431ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7dda8ad93b2500f7f38d246f1613164') in 0.049904 seconds
+  Import took 0.052388 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.508989 seconds.
+  path: Assets/Prefabs/schlaukopf_right_fig 1.prefab
+  artifactKey: Guid(36a0c141e53d9284b9df6fb7395431ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/schlaukopf_right_fig 1.prefab using Guid(36a0c141e53d9284b9df6fb7395431ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e682e339a520571349eafd30f8bb636f') in 0.015566 seconds
+  Import took 0.017941 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.066544 seconds.
+  path: Assets/Prefabs/schlaukopf_right_fig 1.prefab
+  artifactKey: Guid(36a0c141e53d9284b9df6fb7395431ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/schlaukopf_right_fig 1.prefab using Guid(36a0c141e53d9284b9df6fb7395431ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e682e339a520571349eafd30f8bb636f') in 0.012563 seconds
+  Import took 0.014783 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.139420 seconds.
+  path: Assets/Prefabs/schlaukopf_right_fig 1.prefab
+  artifactKey: Guid(36a0c141e53d9284b9df6fb7395431ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/schlaukopf_right_fig 1.prefab using Guid(36a0c141e53d9284b9df6fb7395431ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86e4bfff64f383683c4eecfb30afcdff') in 0.013924 seconds
+  Import took 0.016439 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.090352 seconds.
+  path: Assets/Prefabs/schlaukopf_right_fig 1.prefab
+  artifactKey: Guid(36a0c141e53d9284b9df6fb7395431ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/schlaukopf_right_fig 1.prefab using Guid(36a0c141e53d9284b9df6fb7395431ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86e4bfff64f383683c4eecfb30afcdff') in 0.012206 seconds
+  Import took 0.014321 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.682460 seconds.
+  path: Assets/Prefabs/schlaukopf_right_fig 1.prefab
+  artifactKey: Guid(36a0c141e53d9284b9df6fb7395431ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/schlaukopf_right_fig 1.prefab using Guid(36a0c141e53d9284b9df6fb7395431ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a5683b2b2d172944947b5cd90d939ef') in 0.012240 seconds
+  Import took 0.014788 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000569 seconds.
+  path: Assets/Prefabs/schlaukopf_right_fig 1.prefab
+  artifactKey: Guid(36a0c141e53d9284b9df6fb7395431ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/schlaukopf_right_fig 1.prefab using Guid(36a0c141e53d9284b9df6fb7395431ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a5683b2b2d172944947b5cd90d939ef') in 0.011828 seconds
+  Import took 0.013793 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.642557 seconds.
+  path: Assets/Prefabs/schlaukopf_right_fig 1.prefab
+  artifactKey: Guid(36a0c141e53d9284b9df6fb7395431ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/schlaukopf_right_fig 1.prefab using Guid(36a0c141e53d9284b9df6fb7395431ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3dc6d3f5d8fe25aa6be3cb11318e5926') in 0.015706 seconds
+  Import took 0.019700 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.071764 seconds.
+  path: Assets/Prefabs/schlaukopf_right_fig 1.prefab
+  artifactKey: Guid(36a0c141e53d9284b9df6fb7395431ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/schlaukopf_right_fig 1.prefab using Guid(36a0c141e53d9284b9df6fb7395431ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c36a90e85a335e8bae583b2510db4234') in 0.011695 seconds
+  Import took 0.013752 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.071426 seconds.
+  path: Assets/Prefabs/schlaukopf_right_fig 1.prefab
+  artifactKey: Guid(36a0c141e53d9284b9df6fb7395431ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/schlaukopf_right_fig 1.prefab using Guid(36a0c141e53d9284b9df6fb7395431ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c36a90e85a335e8bae583b2510db4234') in 0.015235 seconds
+  Import took 0.017840 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.320491 seconds.
+  path: Assets/Prefabs/Dummkopf_right_fig.prefab
+  artifactKey: Guid(3370fd66fee25284b92bec6826ebecf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dummkopf_right_fig.prefab using Guid(3370fd66fee25284b92bec6826ebecf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a50494318910dd9747e87dc33f62d82') in 0.021730 seconds
+  Import took 0.024048 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.061267 seconds.
+  path: Assets/Prefabs/Dummkopf_right_fig.prefab
+  artifactKey: Guid(3370fd66fee25284b92bec6826ebecf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dummkopf_right_fig.prefab using Guid(3370fd66fee25284b92bec6826ebecf1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a50494318910dd9747e87dc33f62d82') in 0.014559 seconds
+  Import took 0.016962 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.275895 seconds.
+  path: Assets/Prefabs/Dummkopf_left_fig.prefab
+  artifactKey: Guid(fa3fae2cc8cc97b468ed1f2cc7bc8cbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dummkopf_left_fig.prefab using Guid(fa3fae2cc8cc97b468ed1f2cc7bc8cbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e6ff1eed484c4aa0a229397e9ac8c6b') in 0.018981 seconds
+  Import took 0.021409 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.063590 seconds.
+  path: Assets/Prefabs/Dummkopf_left_fig.prefab
+  artifactKey: Guid(fa3fae2cc8cc97b468ed1f2cc7bc8cbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Dummkopf_left_fig.prefab using Guid(fa3fae2cc8cc97b468ed1f2cc7bc8cbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e6ff1eed484c4aa0a229397e9ac8c6b') in 0.019303 seconds
+  Import took 0.021652 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000665 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.718 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1119 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 60.7 MB.
+System memory in use after: 60.7 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1596.
+Total: 2.143000 ms (FindLiveObjects: 0.187400 ms CreateObjectMapping: 0.045000 ms MarkObjects: 1.846500 ms  DeleteObjects: 0.062000 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
