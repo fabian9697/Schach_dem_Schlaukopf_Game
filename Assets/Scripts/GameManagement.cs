@@ -5,39 +5,73 @@ using UnityEngine;
 // The class "GameManagement" manages the entire "Schach dem Schlaukopf" game.
 public class GameManagement : MonoBehaviour
 {
-    // Variables for the current mouse position
+    // Variables for the current mouse position.
     public int selectionX=-1;
     public int selectionY=-1;
 
     // Constants for the field sizes.
     public int TILE_SIZE;
     public float TILE_OFFSET;
- 
-    // Two dimensional array to save the GameFigure positions on the board
+
+    // List of all figures that can be initialized.
+    [SerializeField]
+    public GameObject Cam;
+
+    // Two dimensional array to store the GameFigures depending on their positions on the board.
     public GameFigures[,] FigurePositions { get; set; }
     
-    // Variable to save the selected GameFigure
+    // Variable to store the currently selected GameFigure.
     private GameFigures _selectedFigure;
     
-    // List of all figures that can be initialized
+    // List of all figures that can be initialized.
     [SerializeField]
     public List<GameObject> GameFigures;
     
-    // List of all active figures on the board
+    // List of all active figures on the board.
     private List<GameObject> _activeFigures = new List<GameObject>();
 
-    // Two dimensional array to save the allowed movements of a figure
+    // Two dimensional array to store the allowed moves of a figure.
     private bool[,] _allowedMoves { get; set; }
 
-    // Boolean to save which player's turn it is
+    // Array in which the allowed move directions depending on the position on the board are defined.
+    // From the point of view of the white player: {Forward, Backward, Left, Right, Diagonal forward left, Diagonal forward right, Diagonal backward left, Diagonal backward right}
+    // For the black player the direct opposite direction holds: Forward for White = Backward for Black; Left for White = Right for Black and so on...  
+    // Important: The origin of coordinates is the upper left corner of the board -> The first two dimensions of this array represent the figure position on the board.
+    private bool[, ,] _allowed_directions_position_dependent = new bool[8,7,8]{
+        {{false, true, false, true, false, false, false, false}, {false, true, true, true, false, false, false, false}, {false, true, true, true, false, false, false, false},
+         {false, true, true, true, false, false, false, false}, {false, true, true, true, false, false, false, false}, {false, true, true, true, false, false, false, false},
+         {false, true, false, false, false, false, false, false}},        
+        {{true, true, false, false, false, false, false, false}, {false, true, false, true, true, false, false, false}, {true, true, true, true, false, false, false, false},
+         {false, true, true, true, false, false, false, false}, {true, true, true, true, false, false, false, false}, {false, true, true, false, false, false, false, false},
+         {true, true, false, false, false, false, false, false}},
+        {{true, true, false, true, false, false, false, false}, {true, true, true, true, false, false, false, false}, {false, false, false, false, true, true, true, true},
+         {false, false, true, true, false, false, false, false}, {false, false, false, false, true, true, true, true}, {true, false, true, true, false, false, false, false},
+         {true, true, true, false, false, false, false, false}},
+        {{false, false, false, true, false, true, false, true}, {false, false, false, true, false, false, false, false}, {true, true, false, true, false, false, false, false},
+         {true, true, true, true, true, true, true, true}, {true, true, false, true, false, false, false, false}, {true, true, true, true, false, false, false, false},
+         {true, true, false, false, false, false, false, false}},
+        {{true, true, false, false, false, false, false, false}, {true, true, true, true, false, false, false, false}, {true, true, true, false, false, false, false, false},
+         {true, true, true, true, true, true, true, true}, {true, true, true, false, false, false, false, false}, {false, false, true, false, false, false, false, false},
+         {false, false, true, false, true, false, true, false}},  
+        {{true, true, false, true, false, false, false, false}, {false, true, true, true, false, false, false, false}, {false, false, false, false, true, true, true, true},
+         {false, false, true, true, false, false, false, false}, {false, false, false, false, true, true, true, true}, {true, true, true, true, false, false, false, false},
+         {true, true, true, false, false, false, false, false}},  
+        {{true, true, false, false, false, false, false, false}, {true, false, false, true, false, false, false, false}, {true, true, true, true, false, false, false, false},
+         {true, false, true, true, false, false, false, false}, {true, true, true, true, false, false, false, false}, {true, false, true, false, false, false, false, true},
+         {true, true, false, false, false, false, false, false}},
+        {{true, false, false, false, false, false, false, false}, {true, false, true, true, false, false, false, false}, {true, false, true, true, false, false, false, false},
+         {true, false, true, true, false, false, false, false}, {true, false, true, true, false, false, false, false}, {true, false, true, true, false, false, false, false},
+         {true, false, true, false, false, false, false, false}}};
+
+    // Boolean to store which player's turn it is.
     public bool isWhiteTurn = true;
 
     public static GameManagement Instance { get; set; }
 
-    // Boolean to save whether a figure is allowed to conduct a movement
+    // Boolean to store whether a figure is allowed to conduct a movement.
     private bool _hasAtLeastOneMove;
 
-    // Function to initialize a match. 
+    // Function to initialize a match.
     void Start()
     {
         Instance = this;
@@ -48,6 +82,7 @@ public class GameManagement : MonoBehaviour
     // Function to place all figures on the board.
     private void SpawnAllFigures()
     {
+        // Team Black
         SpawnFigure(0, 1, 0);
         SpawnFigure(0, 1, 1);
         SpawnFigure(0, 1, 2);
@@ -63,6 +98,7 @@ public class GameManagement : MonoBehaviour
 
         SpawnFigure(2, 0, 3);
 
+        // Team White
         SpawnFigure(3, 6, 0);
         SpawnFigure(3, 6, 1);
         SpawnFigure(3, 6, 2);
@@ -108,6 +144,7 @@ public class GameManagement : MonoBehaviour
     void Update()
     {
         DrawBoard();
+
         // Determination and visualization of the mouse position in the scene-view
         UpdateSelection();
 
@@ -139,16 +176,17 @@ public class GameManagement : MonoBehaviour
         Vector3 heightLine = Vector3.forward * 7;
 
         // Draw lines to obtain a board in the scene-view.
-        for (int i = 0; i <= 7; i++)
+        for (int i = 0; i < 8; i++)
         {
             Vector3 start = Vector3.forward * i;
             Debug.DrawLine(start, start + widthLine);
-            for (int j = 0; j <= 8; j++)
+            for (int j = 0; j < 9; j++)                    
             {
                 start = Vector3.right * j;
                 Debug.DrawLine(start, start + heightLine);
             }
         }
+        
         // If the mouse is inside the board, a cross is displayed in the scene view.
         if (selectionX >= 0 && selectionY >= 0)
         {
@@ -186,8 +224,15 @@ public class GameManagement : MonoBehaviour
         // Flag to store the information whether there exists at least one possible move for the current figure. 
         _hasAtLeastOneMove = false;
 
+        // Determine the allowed directions at the current position of the figure.
+        bool[] allowed_directions_on_current_position = new bool [8];
+        for (int i = 0; i < 8; i++)
+        {
+            allowed_directions_on_current_position[i] = _allowed_directions_position_dependent[x, y, i];
+        }
+
         // The possible moves of the selected figure are determined.
-        _allowedMoves = FigurePositions[x, y].PossibleMove();
+        _allowedMoves = FigurePositions[x, y].PossibleMove(allowed_directions_on_current_position);
 
         // Loop over the returned two dimensional array "_allowedMoves". Break the loop if at least one move can be found and set the flag "_hasAtLeastOneMove" to true.
         for (int i = 0; i < 8; i++)
@@ -228,7 +273,7 @@ public class GameManagement : MonoBehaviour
                 Destroy(PossibleEnemy.gameObject);
 
                 // If the enemy's figure was the "Schlaukopf" end the game.
-                if (PossibleEnemy.GetType() == typeof(Schlaukopf_left) || PossibleEnemy.GetType() == typeof(Schlaukopf_right))
+                if (PossibleEnemy.GetType() == typeof(SchlaukopfWhite) || PossibleEnemy.GetType() == typeof(SchlaukopfBlack))
                 {
                     EndGame();
                     return;
@@ -246,6 +291,17 @@ public class GameManagement : MonoBehaviour
 
             // Change the active player after the move was conducted.
             isWhiteTurn = !isWhiteTurn;
+
+            if (isWhiteTurn == true)
+            {
+                Cam.transform.position = new Vector3(8.5f, 4.75f, 3.32f);
+                Cam.transform.rotation = Quaternion.Euler(50f, 270f, 0f);
+            }
+            else if (isWhiteTurn == false)
+            { 
+                Cam.transform.position = new Vector3(-1.0f, 4.75f, 3.32f);
+                Cam.transform.rotation = Quaternion.Euler(130f, 270f, 180f);
+            }
         }
 
         // Hide the previous shown highlights.

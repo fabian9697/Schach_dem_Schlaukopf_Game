@@ -1388,7 +1388,7 @@ GameObject:
   - component: {fileID: 4322322030920622349}
   - component: {fileID: -3404491969270592485}
   m_Layer: 0
-  m_Name: Dummkopf_Left_fig
+  m_Name: Dummkopf_left_fig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1441,7 +1441,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5156100046455347327}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4109ca33ef5567344b31741c1094ca3d, type: 3}
+  m_Script: {fileID: 11500000, guid: 288875e7bd9fb094aadd33a0b87be70f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isWhite: 1

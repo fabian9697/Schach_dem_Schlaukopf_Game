@@ -15,7 +15,7 @@ public abstract class GameFigures : MonoBehaviour
         CurrentY = y;
     }
 
-    public virtual bool[,] PossibleMove()
+    public virtual bool[,] PossibleMove(bool[] allowed_directions_on_current_position)
     {
         return new bool[8, 7];
     }

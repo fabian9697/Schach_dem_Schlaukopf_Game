@@ -819,9 +819,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2639797296337425998}
-  - component: {fileID: 6512044778567912037}
+  - component: {fileID: -4716083524873469592}
   m_Layer: 0
-  m_Name: figure-schlitzohr
+  m_Name: Schlitzohr_left_figure
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -866,7 +866,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &6512044778567912037
+--- !u!114 &-4716083524873469592
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -875,7 +875,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3452467658065890548}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74b8d4a429c3a8148a1a7b04b137f7da, type: 3}
+  m_Script: {fileID: 11500000, guid: 9d11468cd74a4874fb52dab1b739983b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isWhite: 1
